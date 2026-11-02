@@ -11,7 +11,7 @@
     "typecheck": "tsc --noEmit",
     "test": "node smoke-test.js"
   },
-  "keywords": [],
+  
   "author": "",
   "license": "ISC",
   "dependencies": {
