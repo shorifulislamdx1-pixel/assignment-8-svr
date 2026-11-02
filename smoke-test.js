@@ -4,7 +4,7 @@
 require("dotenv").config();
 const jwt = require("jsonwebtoken");
 
-const BASE = process.env.BASE_URL || "http://localhost:5000";
+const BASE = process.env.BASE_URL || "https://assignment-8-mauve-three.vercel.app:5000";
 const SECRET = process.env.JWT_SECRET || "audit-test-secret-123";
 const ownerToken = jwt.sign(
   { email: "audit-owner@test.local", name: "Audit Owner" },

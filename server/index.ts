@@ -5,7 +5,7 @@ import "dotenv/config";
 import { verifyToken } from "./middleware/verifyToken.js";
 
 const app = express();
-const PORT = Number(process.env.PORT) || 8000;
+const PORT = Number(process.env.PORT) || 5000;
 
 app.use(express.json());
 
@@ -46,7 +46,7 @@ async function startServer() {
     });
 
     app.listen(PORT, () => {
-      console.log(`Server running at http://localhost:${PORT}`);
+      console.log(`Server running at https://assignment-8-mauve-three.vercel.app:${PORT}`);
     });
   } catch (error) {
     console.error("Server startup failed:", error);

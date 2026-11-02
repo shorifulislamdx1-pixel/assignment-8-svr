@@ -3,7 +3,7 @@ import { MongoClient } from 'mongodb';
 import 'dotenv/config';
 
 const app = express();
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
 
@@ -33,7 +33,7 @@ async function startServer() {
   await connectToMongoDB();
 
   app.listen(PORT, () => {
-    console.log(`Server is running at http://localhost:${PORT}`);
+    console.log(`Server is running at https://assignment-8-mauve-three.vercel.app:${PORT}`);
   });
 }
 
