@@ -1,19 +1,16 @@
 {
   "name": "assignment-8-server",
   "version": "1.0.0",
-  "description": "",
-  "main": "dist/index.js",
+  "private": true,
+  "description": "BookNook API for local development and Vercel serverless deployment",
+  "main": "index.js",
   "scripts": {
-    "prebuild": "node -e \"require('node:fs').rmSync('dist',{recursive:true,force:true})\"",
-    "build": "tsc",
-    "start": "node dist/index.js",
-    "dev": "tsx watch server/index.ts",
-    "typecheck": "tsc --noEmit",
+    "dev": "node --watch server/local.js",
+    "start": "node server/local.js",
+    "build": "node --check index.js && node --check server/local.js",
+    "typecheck": "node --check index.js && node --check server/local.js",
     "test": "node smoke-test.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^18.0.9",
